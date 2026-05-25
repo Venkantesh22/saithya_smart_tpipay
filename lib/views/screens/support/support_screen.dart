@@ -40,13 +40,7 @@ class _HelpAndSupportState extends State<HelpAndSupport> {
               children: [
                 HelpTopSection(),
                 HelpMedSection()
-                // Text(
-                //     "Mobile No : ${basicController.supportModel?.mobile ?? ""}"),
-                // SizedBox(height: 6),
-                // Text("Email : ${basicController.supportModel?.email ?? ""}"),
-                // SizedBox(height: 6),
-                // Text(
-                //     "WhatApp No : ${basicController.supportModel?.whatsapp ?? ""}"),
+                
               ],
             ),
           ),

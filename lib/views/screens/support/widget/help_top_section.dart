@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lekra/services/constants.dart';
 import 'package:lekra/services/theme.dart';
-import 'package:lekra/views/screens/support/widget/help_supper_call_email_widget.dart';
 
 class HelpTopSection extends StatelessWidget {
   const HelpTopSection({
@@ -11,6 +10,7 @@ class HelpTopSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           "How can we help you?",
