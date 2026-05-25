@@ -349,5 +349,9 @@ class Assets {
   /// Assets for svgsWalletPassword
   /// assets/svgs/wallet-password.svg
   static const String svgsWalletPassword = "assets/svgs/wallet-password.svg";
+
+  /// Assets for svgsWishList
+  /// assets/svgs/wish_list.svg
+  static const String svgsWishList = "assets/svgs/wish_list.svg";
 }
 

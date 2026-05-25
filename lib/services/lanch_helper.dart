@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lekra/services/constants.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LaunchHelper {
@@ -84,5 +85,24 @@ class LaunchHelper {
     if (!launched) {
       showToast(message: 'No UPI app found or cannot open', typeCheck: false);
     } else {}
+  }
+
+  static Future<void> shareToAllApps({
+     String? title,
+    required String link,
+    String message = "",
+  }) async {
+    final text = '''
+$message
+
+$title
+$link
+''';
+
+    await SharePlus.instance.share(
+      ShareParams(
+        text: text,
+      ),
+    );
   }
 }

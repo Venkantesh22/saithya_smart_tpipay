@@ -107,7 +107,7 @@ class CustomTheme {
         color: backgroundLight,
       ),
       iconTheme: IconThemeData(
-        color: backgroundLight,
+        color: black,
       ),
       systemOverlayStyle: SystemUiOverlayStyle(
         // Status bar color

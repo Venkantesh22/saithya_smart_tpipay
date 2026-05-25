@@ -9,10 +9,6 @@ class KeyFeaturesSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<ProductController>(builder: (productController) {
-      // final features = productController.isLoading
-      //     ? List.generate(4, (index) => "")
-      //     : (productController.productModel?.features ?? []);
-
       return Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(

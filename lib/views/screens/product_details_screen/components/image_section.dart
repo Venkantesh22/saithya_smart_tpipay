@@ -2,12 +2,9 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 import 'package:lekra/controllers/product_controller.dart';
-import 'package:lekra/services/constants.dart';
-import 'package:lekra/services/theme.dart';
 import 'package:lekra/views/base/custom_image.dart';
 import 'package:lekra/views/base/shimmer.dart';
 import 'package:lekra/views/screens/dashboard/home_screen/components/home_banner.dart';
-import 'package:lekra/views/screens/widget/card_icon.dart';
 
 class ProductImageSection extends StatefulWidget {
   const ProductImageSection({super.key});
@@ -88,36 +85,6 @@ class _ProductImageSectionState extends State<ProductImageSection> {
             ],
           );
         }),
-        Positioned(
-          left: 12,
-          top: 12,
-          child: CircleAvatar(
-            backgroundColor: white,
-            child: Center(
-              child: IconButton(
-                icon: const Icon(Icons.arrow_back_ios),
-                onPressed: () => pop(context),
-                color: black,
-              ),
-            ),
-          ),
-        ),
-        Positioned(
-          right: 12,
-          top: 12,
-          child: CircleAvatar(
-            backgroundColor: white,
-            child: CardIcon(),
-
-            // Center(
-            //   child: IconButton(
-            //     icon: const Icon(Icons.shopping_cart),
-            //     onPressed: () => pop(context),
-            //     color: black,
-            //   ),
-            // ),
-          ),
-        )
       ],
     );
   }
