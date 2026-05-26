@@ -33,6 +33,7 @@ class _SignUPScreenState extends State<SignUPScreen> {
       authController.emailController.clear();
       authController.numberController.clear();
       authController.passwordController.clear();
+      authController.confirmPasswordController.clear();
       authController.update();
     });
   }
@@ -277,6 +278,103 @@ class _SignUPScreenState extends State<SignUPScreen> {
                                 return "Please enter your password";
                               }
 
+                              if (value.length < 8) {
+                                return "Password must be at least 8 characters";
+                              }
+
+                              if (!RegExp(r'[A-Z]').hasMatch(value)) {
+                                return "Add at least 1 uppercase letter";
+                              }
+
+                              if (!RegExp(r'[a-z]').hasMatch(value)) {
+                                return "Add at least 1 lowercase letter";
+                              }
+
+                              if (!RegExp(r'[0-9]').hasMatch(value)) {
+                                return "Add at least 1 number";
+                              }
+
+                              if (!RegExp(r'[!@#$%^&*(),.?":{}|<>]')
+                                  .hasMatch(value)) {
+                                return "Add at least 1 special character";
+                              }
+
+                              return null;
+                            },
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 12),
+                            child: ValueListenableBuilder(
+                              valueListenable:
+                                  authController.passwordController,
+                              builder: (context, value, child) {
+                                final password =
+                                    authController.passwordController.text;
+
+                                return Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const SizedBox(height: 8),
+                                    passwordRule(
+                                      isValid: password.length >= 8,
+                                      text: "Minimum 8 characters",
+                                    ),
+                                    passwordRule(
+                                      isValid:
+                                          RegExp(r'[A-Z]').hasMatch(password),
+                                      text: "One uppercase letter",
+                                    ),
+                                    passwordRule(
+                                      isValid:
+                                          RegExp(r'[a-z]').hasMatch(password),
+                                      text: "One lowercase letter",
+                                    ),
+                                    passwordRule(
+                                      isValid:
+                                          RegExp(r'[0-9]').hasMatch(password),
+                                      text: "One number",
+                                    ),
+                                    passwordRule(
+                                      isValid:
+                                          RegExp(r'[!@#\$%^&*(),.?\":{}|<>]')
+                                              .hasMatch(password),
+                                      text: "One special character",
+                                    ),
+                                  ],
+                                );
+                              },
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          AppTextFieldWithHeading(
+                            controller:
+                                authController.confirmPasswordController,
+                            obscureText: true,
+                            heading: "Confirm Password",
+                            textInputAction: TextInputAction.done,
+                            onFieldSubmitted: (_) =>
+                                _registerFun(authController: authController),
+                            hindText: "Enter Password again",
+                            hintStyle: Theme.of(context)
+                                .textTheme
+                                .bodyMedium
+                                ?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                  color: grey,
+                                ),
+                            validator: (value) {
+                              if (value == null || value.isEmpty) {
+                                return "Please confirm password";
+                              }
+
+                              if (value !=
+                                  authController.passwordController.text) {
+                                return "Passwords do not match";
+                              }
+
                               return null;
                             },
                           ),
@@ -446,6 +544,35 @@ class _SignUPScreenState extends State<SignUPScreen> {
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget passwordRule({
+    required bool isValid,
+    required String text,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 4),
+      child: Row(
+        children: [
+          Icon(
+            isValid ? Icons.check_circle : Icons.radio_button_unchecked,
+            color: isValid ? Colors.green : Colors.grey,
+            size: 18,
+          ),
+          const SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              text,
+              style: TextStyle(
+                color: isValid ? Colors.green : Colors.grey,
+                fontSize: 13,
+                fontWeight: isValid ? FontWeight.w600 : FontWeight.normal,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
