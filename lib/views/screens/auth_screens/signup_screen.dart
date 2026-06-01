@@ -104,12 +104,7 @@ class _SignUPScreenState extends State<SignUPScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const CustomImage(
-                    path: Assets.imagesOnlyLogo,
-                    height: 80,
-                    width: 80,
-                    fit: BoxFit.contain,
-                  ),
+                  LogoWithWidget(),
                   Text(
                     "Create an Account",
                     style: Theme.of(context).textTheme.titleMedium,
@@ -574,6 +569,45 @@ class _SignUPScreenState extends State<SignUPScreen> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class LogoWithWidget extends StatelessWidget {
+  const LogoWithWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        SizedBox(
+          height: 130,
+          width: double.infinity,
+          child: const CustomImage(
+            path: Assets.imagesOnlyLogo,
+            height: 80,
+            width: 80,
+            fit: BoxFit.contain,
+          ),
+        ),
+        Positioned(
+          bottom: 0,
+          left: 0,
+          right: 0,
+          child: Center(
+            child: Text(
+              AppConstants.appName,
+              style: Helper(context).textTheme.headlineMedium?.copyWith(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
+                  ),
+            ),
+          ),
+        )
+      ],
     );
   }
 }

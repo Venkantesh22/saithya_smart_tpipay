@@ -101,12 +101,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                const CustomImage(
-                  path: Assets.imagesOnlyLogo,
-                  height: 80,
-                  width: 80,
-                  fit: BoxFit.contain,
-                ),
+                LogoWithWidget(),
                 Text(
                   "Welcome Back",
                   style: Theme.of(context).textTheme.titleMedium,

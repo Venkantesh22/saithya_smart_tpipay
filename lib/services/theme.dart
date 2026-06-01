@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Color primaryColor = const Color(0xFF0D80F2);
+Color primaryColor = const Color(0xFF341EB2);
 Color secondaryColor = const Color(0xFFf97316);
 Color backgroundDark = const Color(0xff231F20);
 Color backgroundLight = const Color(0xffffffff);
@@ -125,7 +125,7 @@ class CustomTheme {
         fontSize: 14.0,
       ),
       headlineLarge: GoogleFonts.openSans(),
-      headlineMedium: GoogleFonts.openSans(),
+      headlineMedium: GoogleFonts.cactusClassicalSerif(),
       headlineSmall: GoogleFonts.inter(),
       displayLarge: GoogleFonts.poppins(
         fontSize: 18,
