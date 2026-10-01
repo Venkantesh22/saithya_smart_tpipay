@@ -8,7 +8,6 @@ import 'package:lekra/controllers/dashboard_controller.dart';
 import 'package:lekra/services/constants.dart';
 import 'package:lekra/services/input_decoration.dart';
 import 'package:lekra/services/route_helper.dart';
-import 'package:lekra/views/base/custom_image.dart';
 import 'package:lekra/views/screens/auth_screens/forget_password/enter_number_for_opt_screen.dart';
 import 'package:lekra/views/screens/auth_screens/forget_password/opt_verification_screen.dart';
 import 'package:lekra/views/screens/auth_screens/signup_screen.dart';

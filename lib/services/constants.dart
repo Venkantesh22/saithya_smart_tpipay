@@ -155,6 +155,7 @@ class AppConstants {
 
   static String googlePlayStoreLink =
       'https://play.google.com/store/apps/details?id=com.tpipay.trustindia';
+      
 
   //OTP
   static const String generateOtp = 'api/send-otp';
