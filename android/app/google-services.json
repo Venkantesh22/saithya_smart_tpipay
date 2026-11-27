@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "517127808323",
+    "project_id": "saithya-smart",
+    "storage_bucket": "saithya-smart.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517127808323:android:8c594553bb8ab03cf1fbf6",
+        "android_client_info": {
+          "package_name": "com.saithya"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRfvtQTdS7jcy5K28AGnv5rwiXw-9QPwI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,85 @@
+{
+  "id": "saithya-smart-tpipay-env",
+  "name": "Saithya Smart / TPIPay Environment (Local & Live)",
+  "values": [
+    {
+      "key": "base_url",
+      "value": "http://127.0.0.1:8000",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "live_base_url",
+      "value": "https://sathiyasmart.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "auth_token",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "admin_token",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "vendor_token",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "demo_mobile",
+      "value": "9876543210",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "demo_password",
+      "value": "password123",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "wallet_pin",
+      "value": "123456",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "admin_email",
+      "value": "admin@saithyasmart.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "admin_password",
+      "value": "password123",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "vendor_email",
+      "value": "vendor@saithyasmart.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "vendor_password",
+      "value": "password123",
+      "type": "secret",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}
